@@ -20,6 +20,15 @@ app.get("/", (req, res)=> {
 })
 
 
+app.get("/notifications" , (req, res) => {
+        res.json({
+                "network" : Math.floor(Math.random() * 100) + 1,
+                "jobs" Math.floor(Math.random() * 10) + 1,
+                "messaging" : Math.floor(Math.random() * 10) + 1,
+                "notifications" : Math.floor(Math.random() * 10) + 1,
+        })
+} )
+
 app.get("/todos", (req, res) => {
     res.json(todos)
 })
